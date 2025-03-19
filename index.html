@@ -10,7 +10,7 @@
 	<meta name="description" content="Happy Birthday">
 	<meta name="robots" content="index, follow" />
 	<link rel="author" href="https://plus.google.com/u/1/+AyushSharma1/" /> 
-    <meta name="keywords" content="Birthday, Happy">
+    <meta name="Lại Linh" content="Birthday, Happy">
     <!-- Strat of Facebook Meta -->
     <meta property="og:type" content="E-Greeting" />
     <meta property="og:image" content="favicon.ico" />
@@ -28,6 +28,59 @@
 	<link rel="stylesheet/less" href="cake.less">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
 </head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+    var audio = $('.song')[0];
+
+    $('#turn_on').click(function () {
+        $('.bulb').addClass('bulb-glow');
+        $(this).fadeOut();
+        $('#play').fadeIn();
+    });
+
+    $('#play').click(function () {
+        audio.play();
+        $(this).fadeOut();
+        $('#bannar_coming').fadeIn();
+    });
+
+    $('#bannar_coming').click(function () {
+        $('.bannar').addClass('bannar-come');
+        $(this).fadeOut();
+        $('#balloons_flying').fadeIn();
+    });
+
+    $('#balloons_flying').click(function () {
+        $('.balloons').addClass('balloons-animate');
+        $(this).fadeOut();
+        $('#cake_fadein').fadeIn();
+    });
+
+    $('#cake_fadein').click(function () {
+        $('.cake-cover').fadeIn('slow');
+        $(this).fadeOut();
+        $('#light_candle').fadeIn();
+    });
+
+    $('#light_candle').click(function () {
+        $('.fuego').addClass('flicker');
+        $(this).fadeOut();
+        $('#wish_message').fadeIn();
+    });
+
+    $('#wish_message').click(function () {
+        $('.cake-cover').addClass('message-come');
+        $(this).fadeOut();
+        $('#story').fadeIn();
+    });
+
+    $('#story').click(function () {
+        $('.message').fadeIn();
+        $('.navbar-fixed-bottom').fadeOut();
+    });
+});
+</script>
 
 <body>
 	<div class="loading"></div>
